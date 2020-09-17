@@ -1,7 +1,8 @@
+let name;
 let object = {
 	String: "text",
 	Number: 7,
 	Boolean: true,
-	Undefined: Undefined,
+	Undefined: name,
 	Null: Null
 };
