@@ -4,5 +4,5 @@ let object = {
 	Number: 7,
 	Boolean: true,
 	Undefined: name,
-	Null: Null
+	Null: null
 };
