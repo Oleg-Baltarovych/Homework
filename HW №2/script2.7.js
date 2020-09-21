@@ -12,29 +12,14 @@ if (currentHours > 5 && currentHours <= 11) {
 	console.log("Доброї ночі");
 }
 // Використання умовного оператора switch.
-switch (currentHours) {
-	case 6:
-	case 7:
-	case 8:
-	case 9:
-	case 10:
-	case 11:
+switch (true) {
+	case currentHours > 5 && currentHours <= 11:
 	console.log("Доброго ранку");
 	break;
-	case 12:
-	case 13:
-	case 14:
-	case 15:
-	case 16:
-	case 17:
+	case currentHours > 11 && currentHours <= 17:
 	console.log("Доброго дня");
 	break;
-	case 18:
-	case 19:
-	case 20:
-	case 21:
-	case 22:
-	case 23:
+	case currentHours > 17 && currentHours <= 23:
 	console.log("Доброго вечора");
 	break;
 	default:
