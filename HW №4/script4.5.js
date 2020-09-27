@@ -13,7 +13,7 @@ function showUsers(ids) {
 	return result;
 }
 try {
-	result = showUsers([20, -12, 30, 76]);
+	result = showUsers([20, 12, 30, 76]);
 	console.log(result);
 } catch (error) {
 	console.log(error.name);
