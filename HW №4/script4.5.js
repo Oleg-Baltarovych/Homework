@@ -8,13 +8,14 @@ function showUser(id) {
 function showUsers(ids) {
 	let result = [];
 	for (let i = 0; i < ids.length; i++) {
-	result[i] = showUser(ids[i]);
+	try {
+		result[i] = showUser(ids[i]);
+	} catch (error) {
+		console.log(error.name);
+		console.log(error.message);
+	}
 	}
 	return result;
 }
-try {
-	showUsers([7, -12, 44, 22]);
-} catch (error) {
-	console.log(error.name);
-	console.log(error.message);
-}
+
+showUsers([7, -12, 44, 22])
