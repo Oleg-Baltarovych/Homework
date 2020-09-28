@@ -1,14 +1,15 @@
 function checkAge() {
-	let age = prompt("Введіть свій вік.");
-	if (age == "") {
+	let age = +(prompt("Введіть свій вік."));
+	if (age <= 14 && age > 0) {
+		throw new Error("Ви ще надто молодий");
+	} else if (age === "" || age === " ") {
 		throw new Error("Поле пусте. Будь ласка вкажіть ваш вік.");
 	} else if (isNaN(age)) {
-		throw new Error("Введіть числове значення.");
-	} else if (age <= 14) {
-		throw new Error("Ви ще надто молодий");
+		throw new Error("Введіть будь ласка числове значення.");
 	} else {
-		return true;
+		throw new Error("Ви ввели некоректне значення.")
 	}
+	return true;
 }
 try {
 	let result = checkAge();
