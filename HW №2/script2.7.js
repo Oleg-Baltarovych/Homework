@@ -1,6 +1,5 @@
 let currentDate = new Date();
 let currentHours = currentDate.getHours();
-	console.log(currentHours);
 // Використання умовного оператора if/else if/else.
 if (currentHours > 5 && currentHours <= 11) {
 	console.log("Доброго ранку");
