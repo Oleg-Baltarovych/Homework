@@ -10,4 +10,4 @@ let strOut = "";
 	}
 return strOut;
 }
-console.log(firstLatter(str));
+console.log(firstLatter(strIn));
