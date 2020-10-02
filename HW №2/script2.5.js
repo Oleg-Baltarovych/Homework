@@ -8,4 +8,4 @@ if (isNaN(isAdult)) {
 	alert("Ви ще надто молоді.");
 } else {
 	alert("Вам менше 18.");
-};
+}
