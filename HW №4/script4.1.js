@@ -1,9 +1,9 @@
 function testThrow(exception) {
-	try{
-		throw exception;
-	} catch (error) {
-		console.log("Caught: " + error);
-	}
+  try {
+    throw exception;
+  } catch (error) {
+    console.log("Caught: " + error);
+  }
 }
 testThrow(5);
 testThrow("Test");
