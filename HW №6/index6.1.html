@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="test">First</div>
+	<script>
+		// Спосіб №1
+		document.getElementById("test").innerHTML = "Last1";
+		// Спосіб №2
+		document.body.children[0].innerHTML = "Last2";
+	</script>
+</body>
+</html>
