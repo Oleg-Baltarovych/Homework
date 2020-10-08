@@ -13,11 +13,23 @@ class Worker {
   }
   showSalary() {
     let result = this.dayRate * this.workingDays;
-    console.log(this.fullName + " salary: " + result);
+    console.log(`${this.fullName} salary: ${+result}`);
   }
   showSalaryWithExperience() {
     let result = this.dayRate * this.workingDays * this.#experience;
-    console.log(this.fullName + " salary: " + result);
+    console.log(`${this.fullName} salary: ${+result}`);
+  }
+  showSalaryWorker() {
+    let result = this.dayRate * this.workingDays * this.#experience;
+    return result;
+  }
+  sortSalary(workerArr) {
+    let sort = workerArr.sort(function(a, b) {
+      return a.showSalaryWorker() - b.showSalaryWorker();
+    })
+    for (let i = 0; i < sort.length; i++) {
+      console.log(sort[i].fullName + ": " + sort[i].showSalaryWorker());
+    }
   }
 }
 
@@ -36,6 +48,7 @@ console.log("New experience: " + worker2.showExp);
 worker2.showSalaryWithExperience();
 worker2.setExp = 1.5;
 console.log("New experience: " + worker2.showExp);
+worker2.showSalaryWithExperience();
 let worker3 = new Worker("Andy Ander", 29, 23);
 console.log(worker3.fullName);
 worker3.showSalary();
@@ -43,3 +56,8 @@ console.log("New experience: " + worker3.showExp);
 worker3.showSalaryWithExperience();
 worker3.setExp = 1.5;
 console.log("New experience: " + worker3.showExp);
+worker3.showSalaryWithExperience();
+
+let workerArr = [worker1, worker2, worker3];
+console.log("Sorted salary: ");
+worker3.sortSalary(workerArr);
