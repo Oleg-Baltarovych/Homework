@@ -24,5 +24,5 @@ function changeFun() {
 	}
 	let p = document.querySelector("p");
 	p.innerHTML = `${country.options[country.selectedIndex].innerHTML} 
-				  , ${cities.options[cities.selectedIndex].innerHTML}`;
+	             , ${cities.options[cities.selectedIndex].innerHTML}`;
 }
