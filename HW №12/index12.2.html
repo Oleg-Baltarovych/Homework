@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="downloadList()">Download list</button>
+	<ul id="list"></ul>
+	<script>
+	function downloadList() {
+		const xhr = new XMLHttpRequest();
+		xhr.open('GET', 'books.json', true);
+		xhr.onreadystatechange = function() {
+
+		if (xhr.readyState != 4) return;
+		if (xhr.status != 200) {
+		alert('Error ' + xhr.status + ': ' + xhr.statusText);
+	} else {
+		let text = JSON.parse(xhr.responseText);
+		console.log(text);
+		for (var i = 0; i < text.length; i++) {
+		list.innerHTML += `<li>${text[i].author}</li>`;
+		}
+	}
+}
+xhr.send();
+}
+	</script>
+</body>
+</html>
