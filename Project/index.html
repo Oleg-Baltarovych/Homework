@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="allContent">
+		<div class="header">
+			<h1>Smart House JS</h1>
+			<button class="onAll" onclick="onAll()">On All</button>
+			<button class="offAll" onclick="offAll()">Off All</button>
+			<button class="showAll" onclick="showAll()">Show All</button>
+			<button class="hideAll" onclick="hideAll()">Hide All</button>
+			<button class="createMenu" onclick="createMenu()">Create Menu</button>
+		</div>
+		<div class="workSpace">
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="myForm">
+				<h2><img src="img/plus.png" alt="">Your menu</h2>
+				<div class="info">
+					<form action="#">
+						Menu name:<input type="text" class="formName">
+						Menu info:<input type="text" class="formInfo">
+						Menu mode:<input type="text" class="formMode">
+						<input type="button" class="btn" value="Get form">
+					</form>
+				</div>
+			</div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
